@@ -1,0 +1,46 @@
+.main {
+  width: 40vw;
+  background-color: #0a0a0a;
+  display: flex;
+  z-index: 1;
+  top: 0;
+  position: fixed;
+  flex-direction: row;
+}
+.main_name {
+  background-color: #127aaf;
+  flex: 1;
+}
+.main_name_para {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: white;
+  font-size: 1.35rem;
+}
+.main_rest {
+  flex: 1.5;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+.main_rest_void {
+  flex: 3;
+}
+.main_rest_restNav {
+  flex: 1;
+  border-left: #191919 0.15rem solid;
+  color: white;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+.main_rest_restNav:hover > hr {
+  border-color: #127aaf;
+}
+.main_rest_restNav_line {
+  color: white;
+  width: 40%;
+  margin: 0.2rem auto;
+  flex: 1;
+  border-top: white 0.13rem solid;
+}

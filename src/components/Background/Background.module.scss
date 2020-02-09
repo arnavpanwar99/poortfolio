@@ -1,0 +1,17 @@
+.main{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    &_background{
+        flex: 4;
+        background: url('./../../assets/test.jpg') no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+    &_content{
+        flex: 6;
+    }
+}

@@ -1,0 +1,79 @@
+.main{
+    &_holder{
+        display: flex;
+        margin: 4rem;
+        flex-direction: row;
+        &_col1{
+            flex: 1;
+            display: flex;
+            &_img{
+                background: url('./../../assets/dp.jpg') no-repeat;
+                background-size: 100%;
+                width: 100%;
+                margin-top: 2rem;
+                height: 60vh;
+            }
+        }
+        &_col2{
+            flex: 1.5;
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            margin-left: 2rem;
+            &_first{
+                text-transform: uppercase;
+                font-weight: light;
+                letter-spacing: .4rem;
+                font-size: 1.6rem;
+                color: #595959;
+                margin-bottom: 1rem;
+            }
+            &_second{
+                text-transform: uppercase;
+                margin-bottom: .5rem;
+                letter-spacing: .2rem;
+                font-size: 3.2rem;
+                font-weight: bold;
+            }
+            &_third{
+                line-height: 3rem;
+            }
+        }
+    }
+    &_stats{
+        display: flex;
+        margin-bottom: 3rem;
+        &_box{
+            flex: 1;
+            text-align: center;
+            background-color: #008dd2;
+            margin-left: 4rem;
+            padding: 1.5rem .7rem;
+            font-size: 3.5rem;
+            color: #090909;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        &_dad{
+            flex: 1;
+            margin: auto;
+            text-align: center;
+            &_stat{
+                font-weight: bolder;
+                font-size: 7rem;
+                margin: auto;
+                text-align: center;
+            }
+            & > p{
+                text-transform: uppercase;
+                font-weight: light;
+                font-size: 1.25rem;
+            }
+        }
+    }
+    &_line{
+        margin: 3rem 2rem 0 2rem;
+        text-align: center;
+        border-top: #999 .1rem solid;
+    }
+}

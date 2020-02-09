@@ -1,0 +1,21 @@
+.textContainer {
+    position: relative;
+    float: left;
+    top: 50%;
+    padding: 1rem 0 1rem 1rem;
+    border-left: #008dd2 solid 0.5rem;
+    left: 40%;
+    transform: translateY(-50%);
+    color: white;
+    &_head {
+        margin-bottom: 1rem;
+        font-size: 6rem;
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+    &_subHead {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,23 @@
+.remainNav{
+    display: flex;
+    flex-direction: row;
+    height: 12.5vh;
+    background-color: #0a0a0a;
+    position: sticky;
+    top: 0;
+    & :first-child {
+        margin-left: 1rem;
+    }
+    &_block {
+        flex: 1;
+        background-color: #191919;
+        color: white;
+        margin: auto;
+        font-size: 1.25rem;
+        text-align: center;
+        padding: 1.5rem 0;
+    }
+    &_void {
+        flex: 2;
+    }
+}

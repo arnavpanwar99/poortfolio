@@ -1,0 +1,11 @@
+.header{
+    background: url('./../../assets/test2.jpg') no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    &_nav{
+        height: 10vh;
+        width: 40%;
+        position: fixed;
+        background-color: black;
+    }
+}
