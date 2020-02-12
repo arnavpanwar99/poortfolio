@@ -4,12 +4,33 @@
     flex-direction: row;
     &_background{
         flex: 4;
-        background: url('./../../assets/test.jpg') no-repeat;
-        background-size: cover;
+        transition: background-image 1000ms linear; 
+        -webkit-transition: background-image 1000ms linear; 
         background-attachment: fixed;
         position: sticky;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         top: 0;
         height: 100vh;
+        &_infoBox{
+            height: 70%;
+            margin-top: 6rem;
+            width: 80%;
+            display: flex;
+            align-items: flex-end;
+            border-left: rgba($color: #fff, $alpha: .45) solid 1.2rem;
+            border-bottom: rgba($color: #fff, $alpha: .45) solid 1.2rem;
+            &_text{
+                margin: 3rem;
+                max-width: 60%;
+                font-size: 6rem;
+                color: white;
+                text-transform: uppercase;
+                font-weight: bolder;
+                border-bottom: #127aaf solid .5rem;
+            }
+        }
     }
     &_content{
         flex: 6;

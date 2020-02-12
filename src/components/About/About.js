@@ -1,13 +1,55 @@
-import $ from 'jquery';
 import React from 'react'
 import s from './About.module.scss';
 import { about_first, about_second, likes, skills } from './../../srtings';
+import { inView } from './../../functions/functions';
 import Start from '../Start/Start';
 
+let c=0;
+
 export default class About extends React.Component{
+
+    state={
+        years: 0,
+        exactYears: 0,
+        exactGoing: 0,
+        going: 0,
+        finished: 0,
+    }
+
+    componentDidMount(){
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    componentWillUnmount(){
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+
+    handleScroll = () => {
+        if (!inView(this.divRef) || c>=1)
+            return
+        c++;
+        const period = Math.floor(1500/17);
+        const call = setInterval(() => {
+            this.setState((prevState) => {
+                return {
+                    exactYears: prevState.exactYears + (4/17),
+                    exactGoing: prevState.exactGoing + (2/17),
+                    finished: prevState.finished + 1,
+                    years: Math.ceil(prevState.exactYears),
+                    going: Math.ceil(prevState.exactGoing)
+                }
+            }, () => {
+                this.state.finished > 16 && clearTimeout(call);
+            })    
+        }, period);
+    }
+ 
+
     render(){
+        const { years, going, finished } = this.state;
         return (
-            <div className={s.main}>
+            <div className={s.main} >
                 <Start first='who i am' second='about me' />
                 <div className={s.main_holder}>
                     <div className={s.main_holder_col1}>
@@ -31,7 +73,7 @@ export default class About extends React.Component{
                             <ul>
                                 {this.renderList(skills)}
                             </ul>
-                            <a href='#' className={s.main_holder_col2_third_button}>
+                            <a href='www.google.com' className={s.main_holder_col2_third_button}>
                                 <div className='main_button'>
                                     View Portfolio
                                 </div>
@@ -45,19 +87,19 @@ export default class About extends React.Component{
                     </div>
                     <div className={s.main_stats_dad}>
                         <div className={s.main_stats_dad_stat}>
-                            <div data-count="4" className="counter-value">0</div>
+                            <div ref={(input) => { this.divRef = input; }}>{years}</div>
                         </div>
                         <p>years of experience</p>
                     </div>
                     <div className={s.main_stats_dad}>
                         <div className={s.main_stats_dad_stat}>
-                            <div data-count="2" className="counter-value">0</div>
+                            <div>{going}</div>
                         </div>
                         <p>ongoing projects</p>
                     </div>
                     <div className={s.main_stats_dad}>
                         <div className={s.main_stats_dad_stat}>
-                            <div data-count="17" className="counter-value">0</div>
+                            <div>{finished}</div>
                         </div>
                         <p>finished projects</p>
                     </div>
@@ -73,44 +115,4 @@ export default class About extends React.Component{
         })
     }
 
-    componentDidMount(){
-        this.checkCounter();        
-    }
-
-    checkCounter = () => {
-        var a = 0;
-        $(window).scroll(function() {
-
-        var oTop = $('#counter').offset().top - window.innerHeight;
-        if (a == 0 && $(window).scrollTop() > oTop) {
-            $('.counter-value').each(function() {
-            var $this = $(this),
-                countTo = $this.attr('data-count');
-            $({
-                countNum: $this.text()
-            }).animate({
-                countNum: countTo
-                },
-
-                {
-
-                duration: 2000,
-                easing: 'swing',
-                step: function() {
-                    $this.text(Math.floor(this.countNum));
-                },
-                complete: function() {
-                    $this.text(this.countNum);
-                    //alert('finished');
-                }
-
-                });
-            });
-            a = 1;
-        }
-
-        });
-    }
-
 }
-

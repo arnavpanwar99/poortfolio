@@ -1,5 +1,7 @@
+@import "./../../scss/animations/animations";
+
 .header{
-    background: url('./../../assets/test2.jpg') no-repeat center;
+    background: linear-gradient(to bottom, transparent, rgba(18, 122, 175, .4) 100%), url('./../../assets/test2.jpg');
     background-size: cover;
     height: 100vh;
     &_nav{
@@ -9,3 +11,18 @@
         background-color: black;
     }
 }
+.up {
+    height: 3rem;
+    width: 5.5rem;
+    background-color: rgba($color: #fff, $alpha: .6);
+    display: inline-block;
+    padding: 3px;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    animation: bounce 2s ease-in forwards;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;   
+}
+  

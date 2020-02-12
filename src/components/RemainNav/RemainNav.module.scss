@@ -10,6 +10,7 @@
     }
     &_block {
         flex: 1;
+        cursor: pointer;
         background-color: #191919;
         color: white;
         margin: auto;
@@ -20,4 +21,8 @@
     &_void {
         flex: 2;
     }
+}
+
+#selected{
+    background-color: '#127aaf';
 }

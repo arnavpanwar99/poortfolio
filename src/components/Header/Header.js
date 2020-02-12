@@ -8,6 +8,7 @@ function Header() {
         <header className={s.header}>
             <NavBar />
             <HeadText />
+            <div className={s.up} ></div>
         </header>
     )
 }

@@ -1,3 +1,5 @@
+@import "./../../scss/animations/animations";
+
 .textContainer {
     position: relative;
     float: left;
@@ -5,7 +7,7 @@
     padding: 1rem 0 1rem 1rem;
     border-left: #008dd2 solid 0.5rem;
     left: 40%;
-    transform: translateY(-50%);
+    animation: bounceInDown 1.5s ease-in-out;
     color: white;
     &_head {
         margin-bottom: 1rem;

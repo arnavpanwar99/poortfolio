@@ -19,7 +19,7 @@ class Expandable extends PureComponent {
         const { active } = this.state;
         const { show, hide } = s;
         return data.map((item, index) => (
-            <React.Fragment>
+            <React.Fragment key={index}>
                 <li className={s.list_item}
                  onClick={() => this.toggleActive(index)}
                 >
@@ -35,7 +35,6 @@ class Expandable extends PureComponent {
     }
 
     render() {
-        const { active } = this.state;
         return (
             <React.Fragment>
                 <ol className={s.list}>

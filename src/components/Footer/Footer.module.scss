@@ -1,0 +1,79 @@
+.footer{
+    float: right;
+    height: 70vh;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    &_part1{
+        flex: 4;
+        display: flex;
+        flex-direction: row;
+        background-color: #191919;
+        &_sub{
+            flex: 1;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            &_heading{
+                color: white;
+                margin-left: 4rem;
+                margin-right: 10rem;
+                border-bottom: #127aaf .3rem solid;
+                text-transform: uppercase;
+                font-size: 2rem;
+                letter-spacing: .2rem;
+                padding-bottom: 1rem;
+                font-weight: lighter;
+            }
+            &_list{
+                &_item{
+                    list-style: none;
+                    text-transform: uppercase;
+                    color: #696969;
+                    font-weight: lighter;
+                    padding: 1rem;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    &_part2{
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        background-color: black;
+        &_right{
+            color: white;
+            flex: 8;
+            margin: auto 4rem;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            font-weight: lighter;
+        }
+        &_button{
+            flex: .7;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            margin: 2rem 4rem 0 0;
+            justify-content: center;
+            align-items: center;
+            background-color: #127aaf;
+            &_up{
+                flex: 1;
+                height: 50%;
+                width: 25%;
+                border: solid white;
+                border-width: 0 .25rem .25rem 0;
+                display: inline-block;
+                transform: rotate(-135deg);
+                -webkit-transform: rotate(-135deg);
+            }
+            &_void{
+                flex: 1.5;
+            }
+        }
+    }
+}    
