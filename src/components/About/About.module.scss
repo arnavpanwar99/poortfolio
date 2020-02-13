@@ -1,8 +1,13 @@
+@import "./../../scss/abstracts/mixins";
 .main{
     &_holder{
         display: flex;
         margin: 4rem;
         flex-direction: row;
+        @include respond(phone){
+            flex-direction: column;
+            margin: 0 1rem;
+        }
         &_col1{
             flex: 1;
             display: flex;
@@ -10,11 +15,18 @@
                 background: url('./../../assets/dp.jpg') no-repeat;
                 background-size: 100%;
                 width: 100%;
-                margin-top: 2rem;
+                margin: 1rem auto;
                 height: 60vh;
+                @include respond(phone){
+                    height: 70vh;
+                }
             }
         }
         &_col2{
+            @include respond(phone){
+                flex: 1;
+                margin: 3rem 0;
+            }
             flex: 1.5;
             font-size: 1.5rem;
             display: flex;
@@ -23,10 +35,16 @@
             &_first{
                 text-transform: uppercase;
                 font-weight: light;
+                font-family: 'Lato';
                 letter-spacing: .4rem;
                 font-size: 1.6rem;
                 color: #595959;
                 margin-bottom: 1rem;
+                @include respond(phone){
+                    font-weight: lighter;
+                    font-size: 1.4rem;
+                    letter-spacing: .3;
+                }
             }
             &_second{
                 text-transform: uppercase;
@@ -34,15 +52,31 @@
                 letter-spacing: .2rem;
                 font-size: 3.2rem;
                 font-weight: bold;
+                @include respond(phone){
+                }
             }
             &_third{
                 line-height: 3rem;
+                font-family: 'Lato';
+                @include respond(phone){
+                    line-height: 2.2rem;
+                    font-size: 1.35rem;
+                }
+                &_list{
+                    @include respond(phone){
+                        padding-left: 2rem;
+                    }   
+                }
             }
         }
     }
     &_stats{
         display: flex;
         margin-bottom: 3rem;
+        flex-direction: row;
+        @include respond(phone){
+            flex-direction: column;
+        }
         &_box{
             flex: 1;
             text-align: center;
@@ -53,11 +87,20 @@
             color: #090909;
             font-weight: bold;
             text-transform: uppercase;
+            @include respond(phone){
+                margin: 1rem auto;
+                padding: 1.5rem;
+                font-size: 3rem;
+
+            }
         }
         &_dad{
             flex: 1;
             margin: auto;
             text-align: center;
+            @include respond(phone){
+                margin: 1rem auto;
+            }
             &_stat{
                 font-weight: bolder;
                 font-size: 7rem;
@@ -68,6 +111,7 @@
                 text-transform: uppercase;
                 font-weight: light;
                 font-size: 1.25rem;
+                font-family: 'Lato';
             }
         }
     }

@@ -138,7 +138,7 @@ class CircleComponent extends React.Component{
           <div className={s.container_lineContainer_line }>
             <div className={s.container_lineContainer_line_text}>
               <span className={s.container_lineContainer_line_text_view}>{two.name}</span>
-              <span className={s.container_lineContainer_line_text_view}>{two.value}%</span>
+              <span className={s.container_lineContainer_line_text_view}><span className={s.special}>{two.value}</span>%</span>
             </div>
             <div className={s.container_lineContainer_line_original}>
               <Line percent={two.value} trailWidth='3' strokeLinecap='butt' strokeWidth="3" strokeColor="#127aaf" />
@@ -147,7 +147,7 @@ class CircleComponent extends React.Component{
           <div className={s.container_lineContainer_line}>
             <div className={s.container_lineContainer_line_text}>
               <span className={s.container_lineContainer_line_text_view}>{three.name}</span>
-              <span className={s.container_lineContainer_line_text_view}>{three.value}%</span>
+              <span className={s.container_lineContainer_line_text_view}><span className={s.special}>{three.value}</span>%</span>
             </div>
             <div className={s.container_lineContainer_line_original}>
               <Line percent={three.value} strokeLinecap='butt' trailWidth='3' strokeWidth="3" strokeColor="#127aaf" />
@@ -156,7 +156,7 @@ class CircleComponent extends React.Component{
           <div className={s.container_lineContainer_line}>
             <div className={s.container_lineContainer_line_text}>
               <span className={s.container_lineContainer_line_text_view}>{four.name}</span>
-              <span className={s.container_lineContainer_line_text_view}>{four.value}%</span>
+              <span className={s.container_lineContainer_line_text_view}><span className={s.special}>{four.value}</span>%</span>
             </div>
             <div className={s.container_lineContainer_line_original}>
               <Line percent={four.value} strokeLinecap='butt' trailWidth='3' strokeWidth="3" strokeColor="#127aaf" />

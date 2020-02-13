@@ -1,3 +1,5 @@
+@import "./../../scss/abstracts/mixins";
+
 .text_block{
     margin: 4rem;
     display: inline-block;
@@ -7,16 +9,30 @@
     font-size: 3.5rem;
     color: #090909;
     padding: 1.5rem;
+    @include respond(phone){
+        margin: 3rem 0 2rem 1rem;
+        font-size: 3rem;
+        padding-bottom: 1rem;
+    }
 }
 .heading{
     text-transform: uppercase;
     font-size: 6rem;
-    display: block;
     font-weight: bolder;
     margin: 0 4rem;
+    font-family: 'Lato';
+    @include respond(phone){
+        margin: 0 0 0 1rem; 
+        font-size: 4rem;
+        letter-spacing: -.25rem;
+        width: 100% !important;
+    }
     &_rule{
         margin: 0 0 4rem 0;
         border-top: #008dd2 .3rem solid;
+        @include respond(phone){
+            width: 50%;
+        }
     }
 }
 .main_button{
@@ -36,5 +52,10 @@
     &:hover{
         background-position: left bottom;
         color: #008dd2;
+    }
+    @include respond(phone){
+        margin: 1rem 0;
+        font-size: 1rem;
+        padding: .6rem 5rem;
     }
 }

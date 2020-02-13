@@ -1,5 +1,10 @@
+@import "./../../scss/abstracts/mixins";
+
 .remainNav{
     display: flex;
+    @include respond(phone){
+        display: none;
+    }
     flex-direction: row;
     height: 12.5vh;
     background-color: #0a0a0a;

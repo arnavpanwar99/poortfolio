@@ -1,6 +1,11 @@
+@import "./../../scss/abstracts/mixins";
+
 .container{
     display: flex;
-    margin: 0 4rem 3rem 4rem;
+    @include respond(phone){
+        flex-direction: column;
+    }
+    margin: 2rem 1rem 0 1rem;
     flex-direction: row;
     justify-content: space-around;
 }

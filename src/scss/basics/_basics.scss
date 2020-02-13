@@ -1,12 +1,15 @@
+@import "./../abstracts/mixins";
+
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
 body{
     margin: 0;
+    @include respond(phone){
+        border-left: #127aaf solid .4rem;
+        border-right: #127aaf solid .4rem;
+        border-bottom: #127aaf solid .4rem;
+    }
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;  
-}
-.some-class{
-    height: 100vh;
-    background-color: red;
 }

@@ -70,7 +70,7 @@ export default class About extends React.Component{
                                 {this.renderList(likes)}
                             </ol>
                             <p>My skill set:</p>
-                            <ul>
+                            <ul className={s.main_holder_col2_third_list}>
                                 {this.renderList(skills)}
                             </ul>
                             <a href='www.google.com' className={s.main_holder_col2_third_button}>
@@ -81,7 +81,7 @@ export default class About extends React.Component{
                         </div>
                     </div>
                 </div>
-                <div className={s.main_stats} id='counter'>
+                <div className={s.main_stats}>
                     <div className={s.main_stats_box}>
                         Some facts
                     </div>

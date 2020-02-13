@@ -1,3 +1,5 @@
+@import "./../../scss/abstracts/mixins";
+
 .hide{
     display: none;
 }
@@ -8,6 +10,11 @@
     -webkit-animation: fadeIn .5s ease-in;
     font-size: 1.5rem;
     line-height: 3rem;
+    font-family: 'Lato';
+    @include respond(phone){
+        line-height: 2.2rem;
+        font-size: 1.35rem;
+    }
 }
 
 @keyframes fadeIn {
@@ -46,6 +53,9 @@
 .list{
     margin: 4rem;
     padding: 0;
+    @include respond(phone){
+        margin: 1rem;
+    }
     &_item{
         list-style: none;
         cursor: pointer;
@@ -56,16 +66,24 @@
         &_main{
             font-size: 2rem;
             font-weight: '300';
+            font-family: 'Lato';
         }
         &_sub{
             font-size: 2rem;
             font-weight: lighter;
+            @include respond(phone){
+                line-height: .1rem;
+            }
         }
     }
     &_line{
         margin: 2.5rem auto;
         color: white;
         border-top: #c9c9c9 .1rem solid;
+        @include respond(phone){
+            width: 90%;
+            margin: 2rem 0;
+        }
     }
 }
 .endLine{

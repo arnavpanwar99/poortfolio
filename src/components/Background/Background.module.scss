@@ -1,9 +1,18 @@
+@import "./../../scss/abstracts/mixins";
+
 .main{
     display: flex;
     width: 100%;
+    @include respond(phone){
+        width: 100%;
+    }
     flex-direction: row;
     &_background{
         flex: 4;
+        @include respond(phone){
+            display: none;
+            flex: 0;
+        }
         transition: background-image 1000ms linear; 
         -webkit-transition: background-image 1000ms linear; 
         background-attachment: fixed;
@@ -22,6 +31,7 @@
             border-left: rgba($color: #fff, $alpha: .45) solid 1.2rem;
             border-bottom: rgba($color: #fff, $alpha: .45) solid 1.2rem;
             &_text{
+                font-family: 'Lato';
                 margin: 3rem;
                 max-width: 60%;
                 font-size: 6rem;
@@ -34,5 +44,8 @@
     }
     &_content{
         flex: 6;
+        @include respond(phone){
+            width: 100%;
+        }
     }
 }

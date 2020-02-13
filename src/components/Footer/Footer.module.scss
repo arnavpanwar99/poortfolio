@@ -1,20 +1,27 @@
+@import "./../../scss/abstracts/mixins";
+
 .footer{
-    float: right;
-    height: 70vh;
-    bottom: 0;
-    width: 100%;
     display: flex;
+    @include respond(phone){
+        width: 90%;
+        margin: auto auto 2rem auto;
+    }
     flex-direction: column;
-    background-attachment: fixed;
-    &_part1{
+        &_part1{
         flex: 4;
         display: flex;
+        @include respond(phone){
+            flex-direction: column;
+        }
         flex-direction: row;
         background-color: #191919;
         &_sub{
             flex: 1;
             margin: auto;
             display: flex;
+            @include respond(phone){
+                margin: 2rem;
+            }
             flex-direction: column;
             &_heading{
                 color: white;
@@ -26,6 +33,10 @@
                 letter-spacing: .2rem;
                 padding-bottom: 1rem;
                 font-weight: lighter;
+                @include respond(phone){
+                    font-weight: bolder;
+                    letter-spacing: 0;
+                }
             }
             &_list{
                 &_item{
@@ -35,13 +46,18 @@
                     font-weight: lighter;
                     padding: 1rem;
                     font-size: 1.5rem;
+                    @include respond(phone){
+                        padding: .2rem;
+                        font-weight: normal;
+                        color: #999;
+                    }
                 }
             }
         }
     }
     &_part2{
-        flex: 1;
         display: flex;
+        height: 12.5vh;
         flex-direction: row;
         background-color: black;
         &_right{
@@ -56,6 +72,9 @@
             flex: .7;
             cursor: pointer;
             display: flex;
+            @include respond(phone){
+                flex: 2.5;
+            }
             flex-direction: column;
             margin: 2rem 4rem 0 0;
             justify-content: center;

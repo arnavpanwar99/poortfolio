@@ -1,5 +1,9 @@
 @import "./../../scss/animations/animations";
+@import "./../../scss/abstracts/mixins";
 
 #animation{
     animation: lightSpeedIn .5s ease-in;
+    @include respond(phone){
+        //animation: none;
+    }
 }
